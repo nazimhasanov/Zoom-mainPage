@@ -1,0 +1,78 @@
+.Image-Gallery-section {
+  overflow: hidden;
+
+  .gallery-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    color: #1e1e1e;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .header2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #787878;
+    margin-top: 20px;
+    padding-bottom: 15px;
+  }
+  .gallery-2 {
+    position: relative;
+    display: inline-block;
+
+    span {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      z-index: 9;
+      display: block;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      opacity: 0;
+      transition: all 0.2s;
+      font-size: 12px;
+      .fas {
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+    &:hover > span {
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 340px;
+      background: linear-gradient(to top, #000, transparent);
+      transition: 0.5s;
+      z-index: 2;
+      opacity: 0;
+    }
+    img {
+      width: 100%;
+    }
+    &:hover::before {
+      opacity: 0.6;
+    }
+    .gallery1 {
+      width: 100%;
+      height: 340px;
+    }
+  }
+  .galleryDiv {
+    padding: 0 !important;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .gallery-2{
+    width: 100%;
+    height: 100%;
+    .icon-zoom {
+      display: none;
+    }
+  }
+  
+}
